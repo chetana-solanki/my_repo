@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .outer-box {
+            position: relative;
+        }
+
+        .inner-box {
+            position: absolute;
+            left: 40%;
+            top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 275px;
+            height: 80vh;
+
+        }
+        .inner-box:hover {
+            width: 300px;
+            height: 85vh;
+        }
+
+        .middle-box {
+            text-align: center;
+            height: 15vh;
+        }
+
+        .button {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 128, 0, 0.79);
+            color: aliceblue;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+        }
+
+        .name {
+            /* border: 2px solid black ; */
+            margin-bottom: 5px;
+        }
+
+        p {
+            /* border: 2px solid black ; */
+            margin: 0px;
+        }
+
+        .icons {
+            /* border: 2px solid black ; */
+            text-align: center;
+            height: 5vh;
+            /* margin-top: 0px; */
+        }
+
+        .fa-envelope {
+            margin-left: 20px;
+        }
+
+        .person {
+            display: flex;
+            /* border: 2px solid black ; */
+            height: 10vh;
+        }
+
+        .follower {
+            /* display: flex; */
+            border: 1px solid black;
+            width: 50%;
+            text-align: center;
+        }
+
+        .following {
+            /* display: flex; */
+            border: 1px solid black;
+            width: 50%;
+            text-align: center;
+        }
+
+        .button-box {
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            height: 10%;
+
+
+        }
+
+        .profile-photo {
+            width: 40%;
+            /* background: #fff; */
+            border-radius: 70px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            /* padding: 20px; */
+            /* overlap effect */
+            margin: -60px auto 0; /*left -60px top, bottom auto(means the image will be centered horizontally) 0 means bottom*/
+            position: relative;
+            z-index: 1;
+            border: 1px solid black;
+            left: 30%;
+        }
+        .banner {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 100%;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <img class="banner" src="mountain.jfif">
+            <div class="profile-photo-div">
+                <img class="profile-photo" src="aaradhya.jfif">
+            </div>
+            <div class="middle-box">
+                <h3 class="name">Chetana Solanki</h3>
+                <p>Designer,cat lover,bookworm apple pie fanatic and nature enthusiast :)</p>
+            </div>
+            <div class="icons">
+                <i class="fa fa-map-marker"></i> Hungry
+                <i class="fa fa-envelope"></i> Send E-mail
+            </div>
+            <div class="person">
+                <div class="follower">
+                    <p>8100</p>
+                    <p>Followers</p>
+                </div>
+                <div class="following">
+                    <p>3650</p>
+                    <p>Following</p>
+                </div>
+            </div>
+            <div class="button-box">
+                <button class="button">Follow</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

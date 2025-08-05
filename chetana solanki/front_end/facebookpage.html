@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .outer{
+            border: 2px solid black;
+            height: 700px;
+        }
+        .upper{
+            padding-top: 10px;
+            border: 2px solid black;
+            height: 11%;
+            place-items: center;
+            background-color: rgb(59, 89, 152);
+            color: white;
+
+        }
+        .lower{
+            border: 2px solid black;
+            height: 87%;
+            padding-left: 450px;
+            }
+        .password{
+            margin-left: 70px;
+        }
+        .login{
+            background-color:rgb(59, 89, 152);
+            color: white;
+        }
+        .forgot{
+            margin-left: 175px;
+            margin-top: 2px;
+        }
+        .email{
+            width: 335px;
+        }
+        button{
+            background-color: green;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="upper">
+            <form>
+                <label>Email or Phone</label>
+                <label class="password">Password</label>
+                <br>
+                <input type="text">
+                <input type="text">
+                <button class="login">Log In</button>
+                <p class="forgot">Forgotten Account?</p>
+            </form>
+
+        </div>
+        <div class="lower">
+            <h1>Create a new account</h1>
+            <p>it's free and always will be</p>
+            <form>
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="surname">
+                <br><br>
+                <input type="number" placeholder="mobile number or Email address" class="email">
+                <br><br>
+                <input type="password" placeholder="New password" size="46">
+                <br><br>
+                <label>Birthday</label>
+                <input type="date"> why do i need to provide my dath of birth? 
+                <br><br>
+                <input type="radio" name="recomendation">Female <input type="radio" name="recomendation">Male 
+                <p>By clicking create Account,you agree to our terms and confirm that you  have read our data policy ,including our cookie use facebook and can opt out at any time.</p>
+                <br><br>
+                <button>Create Account</button>
+
+                
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>

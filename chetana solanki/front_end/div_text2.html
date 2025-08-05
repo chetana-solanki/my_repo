@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .outer{
+            border: 2px solid black;
+            height: 710px;
+            text-align: center;
+            
+        }
+        .inner{
+            border:2px solid black ;
+        }
+        .A,.C{
+            height: 10%;
+            background-color: green;
+            
+        }
+        .B{
+            height: 79%;
+            display: flex;
+        }
+        .left{
+            width: 20%;
+            border: 2px solid black;
+            display: grid;
+            place-items: center;
+            background-color: purple;
+        }
+        .center{
+            width: 60%;
+            border: 2px solid black;
+            display: grid;
+            place-items: center;
+            background-color: red;
+        }
+        .right{
+            width: 20%;
+            border: 2px solid black;
+            display: grid;
+            place-items: center;
+            background-color:lawngreen;
+        }
+        h1,h2{
+            color: white;
+        }
+        
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div_practice</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner A"> 
+            <h1>This is header</h1>
+        </div>
+        <div class="inner B">
+            <div class="left">
+                <h2>left content</h2>
+            </div>
+            <div class="center">
+                <h2>center content</h2>
+            </div>
+            <div class="right">
+                <h2>right content</h2>
+            </div>
+        </div>
+        <div class="inner C">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>

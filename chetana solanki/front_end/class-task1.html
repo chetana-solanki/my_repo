@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .outer-box {
+            background-color: #FF1493;
+            background-image: linear-gradient(to right, #8E0EAB 5%,#FF1493);
+            height: 100vh;
+            width: 100vw;
+            /* position: relative; */
+            
+        }
+
+         .inner-box{
+            display: flex;
+            justify-content: center;
+            padding-top: 20vh;
+            height: 57vh;
+        }
+        .left{
+         background-color:#FF1493;
+         background-image: linear-gradient(#74018e 10%,#FF1493);
+         color: white;
+         text-align: center;
+         padding-top: 32vh;
+         border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+         width: 35vh;
+         position: relative;
+        }
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+        }
+        h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-size: 20px;
+        }
+        p{
+            font-size: 13px;
+        }
+        h4{
+            font-size:14px ;
+            padding:20px ;
+        }
+        .right{
+          /* border: 1px solid black; */
+          background-color: white;
+          text-align: center;
+          border-top-right-radius: 10px;
+         border-bottom-right-radius: 10px;
+         width: 60vh;
+         padding-top: 5vh;
+        }
+        input{
+            border: 7.5px solid lightgray;
+            border-radius: 5px;
+            width: 48vh;
+            height: 5vh;
+            margin: 6px;
+            outline-style: dotted;
+            outline-color: #ff1486;
+        }
+        .btn1{
+             width: 50vh;
+            height: 6vh;
+            background-color: #FF1493;
+            background-image: linear-gradient(to right,#8c5c97,#FF1493);
+            border-radius: 5px;
+            border: 1px solid mediumvioletred;
+            color: white;
+            margin: 8px;
+        }
+        .btn2{
+            width: 22vh;
+            height: 6vh;
+            border-radius: 5px;
+            background-color: rgba(37, 107, 198, 0.785);
+            border:1px solid rgba(37, 107, 198, 0.785);
+            color: white;
+        }
+        .btn3{
+            width: 27vh;
+            height: 6vh;
+            border-radius: 5px;
+            background-color: rgba(61, 25, 181, 0.84);
+            border: 1px solid rgba(61, 25, 181, 0.84);
+            color: white;
+        }
+        .right p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 14px;
+            margin: 10px;
+        }
+        .profile-photo{
+            height: 9vh;
+            width: 9vh;
+            position: absolute;
+            bottom: 43vh;
+            right: 23vh;
+            border-radius: 25px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-page</title>
+</head>
+
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <div class="left">
+                <img class="profile-photo" src="mountain.jfif">
+                 <h1>LOGO</h1>
+                <h2>Welcome Page</h2>
+                <p>sign in to continue access</p>
+                <h4>www.yoursite.com</h4> 
+            </div>
+            <div class="right">
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email Address">
+                <br>
+                <input type="password" placeholder="password">
+                <br>
+                <button class="btn1">CONTINUE</button>
+                <p>Or Connect With Social Media </p>
+                <button class="btn2">Sign In With Twitter</button> <button class="btn3">Sign In With Facebook</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

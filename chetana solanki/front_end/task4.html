@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #04A67B;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+            position: relative;
+
+        }
+
+        ul li {
+            display: inline;
+            list-style: none;
+            padding: 0 16px;
+        }
+
+        .login {
+            position: absolute;
+            left: 85%;
+            bottom: 30%;
+        }
+
+        .first-box {
+            /* border: 2px solid black; */
+            height: 50vh;
+            display: flex;
+        }
+
+        .second-box {
+            /* border: 2px solid black; */
+            position: relative;
+            background-color: #FBD3A1;
+            height: 40vh;
+            z-index: -1;
+        }
+
+        .inner-box1 {
+            position: absolute;
+            /* border: 1px solid black; */
+            top: 70px;
+            left: 150px;
+            background-color: #F26C4F;
+            height: 15vh;
+            width: 25vw;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: aliceblue;
+        }
+
+        .inner-box2 {
+            position: absolute;
+            /* border: 1px solid black; */
+            left: 50%;
+            top: 70px;
+            background-color: #00B7A3;
+            height: 15vh;
+            width: 25vw;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: aliceblue;
+        }
+        .left-box{
+            width: 40%;
+            /* border: 2px solid black; */
+        }
+        .right-box{
+            width: 40%;
+            /* border: 2px solid black; */
+            padding-top: 5%;
+        }
+        .fruit-img{
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Sustainability</li>
+                <div class="login">
+                    <li>Login</li>
+                    <li><i class="fa fa-shopping-cart"></i> cart</li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="first-box">
+        <div class="left-box">
+            <img src="fruit-basktet.png" class="fruit-img">
+        </div>
+        <div class="right-box">
+            <h1>Dinner's at Your door</h1>
+            <br>
+            <p>The last meal of Your day does'nt have to drain the rest of your energy.when you start a free trial with
+                us,you'll get dinner on yours doorsstap without the hassle of grocery shopping. That means you get more
+                time
+                the dinner table. </p>
+        </div>
+    </div>
+    <div class="second-box">
+        <div class="inner-box1"><p>Our pledge To Sustainability</p></div>
+        <div class="inner-box2"><p>How We Support our Communities</p></div>
+    </div>
+</body>
+
+</html>

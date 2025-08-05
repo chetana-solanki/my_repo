@@ -1,0 +1,29 @@
+cd django
+python .\manage.py runserver
+
+
+cd django
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+myvenv\Scripts\activate
+cd Hello
+python .\manage.py runserver
+
+
+
+
+
+
+go to django
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+myvenv\Scripts\activate
+django-admin startproject Hello
+cd Hello
+python .\manage.py runserver
+python .\manage.py startapp home
+
+
+
+
+
+django-admin startproject Hello .
+python -m django --version

@@ -1,0 +1,176 @@
+<!-- : Demonstrate that static positioning doesn’t allow top, left, etc. -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      position: static;
+      top: 50px;
+      left: 50px;
+      background-color: lightblue;
+      width: auto;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Static</div>
+</body>
+</html> -->
+
+<!-- Move the box 30px right and 20px down from its normal position. -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      position: relative;
+      top: 20px;
+      left: 30px;
+      background-color: lightgreen;
+      width: auto;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Relative</div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      position: relative;
+      width: auto;
+      height: 300px;
+      background-color: lightgray;
+    }
+
+    .box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: coral;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Absolute</div>
+  </div>
+</body>
+</html> -->
+
+<!-- Create a fixed header that stays at the top of the page during scroll. -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #333;
+      color: white;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .content {
+      margin-top: 60px;
+      height: 2000px;
+      background: linear-gradient(white, gray);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Fixed Header</div>
+  <div class="content">Scroll down to see header stays fixed.</div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .section {
+      height: 500px;
+      overflow: auto;
+      background: #f9f9f9;
+    }
+
+    h2 {
+      position: sticky;
+      top: 0;
+      background-color: yellow;
+      margin: 0;
+      padding: 10px;
+    }
+
+    p {
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>Sticky Heading</h2>
+    <p>Scroll inside this section to see sticky effect.</p>
+  </div>
+  <p>Scroll inside this section to see sticky effect.</p>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .relative{
+      position: relative;
+      left: 500px;
+      top: 100px;
+      border: 2px solid black;
+      height: 200px;
+      width: 200px;
+      background-color: aqua;
+    }
+    .absolute1{
+      position: absolute;
+      left: -50px ;
+      top: -50px;
+      border:2px solid black ;
+      height: 50%;
+      width: 50%;
+      background-color: lawngreen;
+    }
+    .absolute2{
+      position: absolute;
+      right: -50px ;
+      bottom: -50px;
+      border:2px solid black ;
+      height: 50%;
+      width: 50%;
+      background-color: palevioletred;
+    }
+    
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="relative">
+    <div class="absolute1"></div>
+    <div class="absolute2"></div>
+
+  </div>
+</body>
+</html> -->
+

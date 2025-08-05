@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .box-wrapper {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+        }
+
+        /* Original light box (shadow-like) */
+        .original {
+            background-color: rgba(255, 0, 0, 0.3);
+            /* light red */
+            z-index: 1;
+        }
+
+        /* Transformed main box */
+        .transformed {
+            transform: translate(10px, 15px);
+            /* moved down-right */
+            z-index: 2;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform-box</title>
+</head>
+
+<body>
+    <div class="box-wrapper">
+        <div class="box original"></div>
+        <div class="box transformed"></div>
+    </div>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .original-box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: rgba(255, 0, 0, 0.3);
+            position: relative;
+            
+        }
+        .transformed-box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+            transform: translate(40px,60px);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="original-box">ORIGINAL</div>
+        <div class="transformed-box">TRANSFORMED</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+d:\OneDrive\Desktop\chetana solanki\django\
+
+manage.py
+Main command-line utility for Django. Used to run the server, migrations, etc.
+
+db.sqlite3
+Default SQLite database file for development.
+
+commands.txt
+Your personal notes or commands for working with Django.
+
+static/
+Folder for static files (images, CSS, JS).
+Example: vestrahorn-mountains-stokksnes-iceland.jpg is used as a background image.
+
+templates/
+Folder for project-level HTML templates.
+Example: index.html is rendered for your home page.
+
+
+Hello/
+Main Django project configuration folder.
+
+__init__.py
+Marks this folder as a Python package.
+
+settings.py
+Contains all configuration for your Django project (database, static files, installed apps, etc.).
+
+urls.py
+Root URL configuration. Includes URLs from your home app.
+
+wsgi.py / asgi.py
+Entry points for WSGI/ASGI servers (used for deployment).
+
+pycache/
+Python cache files for faster imports.
+
+
+home/
+Your Django app folder.
+
+__init__.py
+Marks this folder as a Python package.
+
+admin.py
+Register models for Django admin interface.
+
+apps.py
+App configuration.
+
+models.py
+Define database models (currently empty).
+
+tests.py
+Write unit tests for your app (currently empty).
+
+urls.py
+URL patterns for your app (/home/, /about/, /contact/).
+
+views.py
+Functions that handle requests and return responses (HTML or text).
+
+migrations/
+Database migration files (currently only __init__.py).
+
+pycache/
+Python cache files.
+
+
+How It Works Together
+User visits /home/
+
+urls.py routes to urls.py.
+urls.py calls views.py's home function.
+views.py renders index.html.
+Static files
+
+Images, CSS, JS are served from static/ folder.
+Settings
+
+settings.py tells Django where to find templates and static files.
+
+
+Summary Table
+Folder/File	Purpose
+manage.py	Django command-line utility
+db.sqlite3	SQLite database
+static/	Static files (images, CSS, JS)
+templates/	Project-level HTML templates
+Hello/	Project configuration (settings, URLs, WSGI/ASGI)
+home/	Django app (views, URLs, models, admin, tests)

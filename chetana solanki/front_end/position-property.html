@@ -1,0 +1,264 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .static-example{
+            position: static;
+            border: 2px solid black;
+        }
+        .relative-example{
+            position: relative;
+            top: 30px;
+            left: 5x;
+            border: 2px solid black;
+        }
+        .fixed-example{
+            position: fixed;
+            top: 400px;
+            border: 2px solid black;
+        }
+        .absolute-example{
+            position: absolute;
+            border: 2px solid black;
+            top: 500px;
+
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is static</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni nostrum quis molestiae voluptate cupiditate, eius magnam, libero animi labore ipsam alias id modi possimus pariatur ullam dolorem consequuntur? Quisquam?</p>
+    <div class="static-example">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi sapiente iure commodi praesentium fugit deleniti repellendus voluptas architecto repellat. Architecto recusandae ut exercitationem illo corrupti voluptatum aliquid? Fuga, asperiores eveniet?</p>
+    </div>
+    <h1>This is relative</h1>
+    <div class="relative-example">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ad magnam numquam recusandae quisquam cum eveniet deleniti repellendus cumque ducimus, dolores itaque quae, esse eos ipsa facilis, ea accusantium totam!</p>
+
+    </div>
+    <div class="fixed-example">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia assumenda nemo neque atque non similique, eum sunt, amet sequi distinctio commodi iusto architecto nostrum veniam debitis quidem voluptatem ut aperiam.</p>
+    </div>
+
+    <div class="absolute-example">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia assumenda nemo neque atque non similique, eum sunt, amet sequi distinctio commodi iusto architecto nostrum veniam debitis quidem voluptatem ut aperiam.</p>
+    </div>
+
+    
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            /* Horizontal center */
+            align-items: center;
+            /* Vertical center */
+        }
+
+        .relative {
+            position: relative;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .absolute1 {
+            position: absolute;
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            right: 50%;      /* left : -50% */
+            bottom: 50%;     /* top :  -50% */
+            background-color: yellow;
+        }
+        .absolute2 {
+            position: absolute;
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            left: 50%;    /* right : -50% */  
+            top: 50%;     /* bottom : -50% */
+            background-color: pink;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="relative" this is relative>
+        <div class="absolute1" this is relative></div>
+        <div class="absolute2" this is absolute></div>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative and Absolute Boxes</title>
+  <style>
+    .relative-box {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      background-color: lightblue;
+      margin: 50px auto;
+      border: 2px solid #000;
+    }
+
+    .absolute-box1 {
+      position: absolute;
+      top: -40px;
+      left: -70px;
+      width: 150px;
+      height: 150px;
+      background-color: lightcoral;
+      border: 2px solid black;
+    }
+
+    .absolute-box2 {
+      position: absolute;
+      bottom: -60px;
+      right: -70px;
+      width: 150px;
+      height: 150px;
+      background-color: lightgreen;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="relative-box">
+    <div class="absolute-box1"></div>
+    <div class="absolute-box2"></div>
+  </div>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .static{
+            position: static;
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+        }
+        .relative{
+            position: relative;
+            border: 2px solid black;
+            height: 50%;
+            width: 50%;
+            bottom: 20px;
+            right: 30px;
+            top: 10px;
+            left: -50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="static">
+        <div class="relative"></div>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .relative{
+            position: relative;
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+        .absolute{
+            position: absolute; 
+            right: 10px;
+            top: 10px;
+            border: 2px solid black;
+            height:50%;
+            width: 50%;
+            background-color: palevioletred;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="relative">
+        <div class="absolute"></div>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .fixed{
+            position: fixed;
+            top: 0px;
+            border: 2px solid black;
+            height: 100px;
+            width:100%;
+            background-color: peru;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fixed">
+
+    </div>
+</body>
+</html> -->
+

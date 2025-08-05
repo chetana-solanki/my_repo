@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            /* Horizontal center */
+            align-items: center;
+            /* Vertical center */
+            height: 60px;
+            background-color: #eee;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        li {
+            font-size: 16px;
+        }
+
+        .logo {
+            height: 30px;
+            padding-left: 150px;
+        }
+
+        .jiger {
+            padding: 0 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .logo-jiger {
+            display: flex;
+            align-items: center;
+            padding-right: 70vh;
+        }
+
+        li:hover {
+            color: rgb(83, 83, 184);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .left-div {
+            /* border: 1px solid black; */
+            width: 20vw;
+            /* height: 50vh; */
+            padding: 80px;
+            padding-top: 20vh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        .button {
+            height: 25px;
+            width: 20vh;
+            border-radius: 15px;
+            background-color: darkblue;
+            color: #eee;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            padding-left: 40vh;
+        }
+
+        .right-div {
+            padding-left: 30vh;
+            padding-top: 40px;
+        
+        }
+
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-box">
+            <div class="logo-jiger">
+                <img class="logo" src="js2-img.png">
+                <span class="jiger">jiger</span>
+            </div>
+            <div class="container">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>Education</li>
+                    <li>Work</li>
+                    <li>Experience</li>
+                    <li>Contact</li>
+                    <li><input></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            <div class="left-div">
+                <h1>Hi There,</h1>
+                <h1>I'M jiger Sable</h1>
+                <p>I Am into Web Developl</p>
+                <button class="button">About Me</button>
+            
+            <div class="icons">
+                <i class="fa fa-twitter" style="font-size:24px"></i>
+                <i class="fa fa-instagram" style="font-size:24px"></i>
+                <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                <i class="fa fa-telegram" style="font-size:24px"></i>
+            </div>
+            </div>
+            
+            <div class="right-div">
+             <img src="jadir.jpg">
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

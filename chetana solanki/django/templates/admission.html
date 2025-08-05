@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Samyak Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7faff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(30, 60, 114, 0.10);
+        }
+
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+        }
+
+        .dropdown-section {
+            margin-bottom: 18px;
+        }
+
+        details {
+            background: #eaf0fb;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            box-shadow: 0 1px 4px rgba(30, 60, 114, 0.06);
+        }
+
+        summary {
+            font-weight: bold;
+            color: #1e3c72;
+            cursor: pointer;
+            font-size: 1.08rem;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+
+        .form-row label {
+            flex: 0 0 120px;
+            color: #2a5298;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+
+        .form-row input,
+        .form-row select {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #b3c6e0;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 22px;
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2a5298;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Admission Form</h1>
+
+        <div class="dropdown-section">
+            <details>
+                <summary>Admission Process</summary>
+                <ul>
+                    <li>Fill out the online admission form below.</li>
+                    <li>Submit required documents (birth certificate, previous marksheet, photo).</li>
+                    <li>Attend the interaction/entrance test (if applicable).</li>
+                    <li>Check admission result via email or school notice board.</li>
+                    <li>Pay the admission fee to confirm your seat.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Important Dates</summary>
+                <ul>
+                    <li>Admission Opens: 1st April 2024</li>
+                    <li>Last Date to Apply: 30th June 2024</li>
+                    <li>Entrance Test: 10th July 2024</li>
+                    <li>Result Declaration: 15th July 2024</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Fee Structure</summary>
+                <ul>
+                    <li>Admission Fee: ₹5,000</li>
+                    <li>Annual Fee: ₹20,000</li>
+                    <li>Monthly Tuition: ₹1,500</li>
+                    <li>For detailed fee structure, contact the school office.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Contact for Admission Help</summary>
+                <ul>
+                    <li>Phone: +91-9876543210</li>
+                    <li>Email: admissions@samyakclasses.com</li>
+                    <li>Office Hours: Mon-Sat, 8:00 AM - 4:00 PM</li>
+                </ul>
+            </details>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="100" required>
+            </div>
+            <div class="form-row">
+                <label for="class">Class</label>
+                <input type="text" id="class" name="class" required>
+            </div>
+            <div class="form-row">
+                <label for="parent">Parent Name</label>
+                <input type="text" id="parent" name="parent" required>
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+</body>
+
+</html>
