@@ -1,0 +1,47 @@
+<nav class="navbar">
+    <ul class="d-flex list-unstyled w-100 m-0 justify-content-center align-items-center">
+        <li class="me-auto">
+            <a href="{% url 'home' %}"><img
+                    src="https://img.pikbest.com/png-images/20241014/modern-school-logo-vector-design-artwork_10962285.png!w700wp"
+                    alt="School Logo" class="navbar-logo"></a>
+        </li>
+        <li class="right-link"><a href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="{% url 'overview' %}">Overview</a></li>
+                <li><a class="dropdown-item" href="{% url 'board_of_directors' %}">Board of Directors</a></li>
+                <li><a class="dropdown-item" href="{% url 'infrastructure' %}">Infrastructure</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Info</a>
+            <ul class="dropdown-menu" aria-labelledby="infoDropdown">
+                <li><a class="dropdown-item" href="{% url 'pride_of_shanti_niketan' %}">Pride Of Shanti Niketan</a></li>
+                <li><a class="dropdown-item" href="{% url 'cbse_mandatory_disclosure' %}">CBSE Mandatory Disclosure</a>
+                </li>
+                <li><a class="dropdown-item" href="{% url 'bus_rute_staff' %}">Bus Route & Staff</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Academic</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Gallery</a>
+            <ul class="dropdown-menu" aria-labelledby="infoDropdown">
+                <li><a class="dropdown-item" href="{% url 'photo_gallery' %}">Photo Gallery</a></li>
+                <li><a class="dropdown-item" href="{% url 'video_gallery' %}">Video Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="{% url 'teacher' %}">Teachers</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">logout</a></li>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+        <li><a href="{% url 'form' %}">Enquiry</a></li>
+    </ul>
+</nav>

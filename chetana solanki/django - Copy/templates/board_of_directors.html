@@ -1,0 +1,56 @@
+{% extends 'base.html' %} <!-- Extends base.html -->
+{% load static %} <!-- Load static files -->
+{% block title %}Board of Directors{% endblock %}
+
+{% block content %}
+<div class="container-fluid black-box">
+    <div>
+        <h4>Board of Directors</h4>
+    </div>
+</div>
+<div class="container-fluid board-of-directors-container">
+    <h1 class="board-of-directors-page-title"><b><u>Board Of Directors</u></b> of Shanti Niketant Academy</h1>
+</div>
+<div class="board-of-directors-grid">
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/chairman.avif' %}" alt="Chairman">
+        <h5>SATYENDRA SOLANKI</h5>
+        <p>CHAIRMAN</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/ceo.jpg' %}" alt="CEO">
+        <h5>CHETANA SOLANKI</h5>
+        <p>CEO</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/treasurer.jpg' %}" alt="TREASURER">
+        <h5>MAMTA SOLANKI</h5>
+        <p>TREASURER</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/director.jpg' %}" alt="DIRECTOR">
+        <h5>DILIP SOLANKI</h5>
+        <p>DIRECTOR</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/principle.jpg' %}" alt="PRINCIPLE">
+        <h5>RAHUL RAJPUT</h5>
+        <p>PRINCIPLE</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/accountant.jpg' %}" alt="ACCOUNTANT">
+        <h5>MIVAAN RAJPUT</h5>
+        <p>ACCOUNTANT</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/coordinator1.jpg' %}" alt="SENIOR COORDINATOR">
+        <h5>PRIYANKA RAJPUT</h5>
+        <p>SENIOR COORDINATOR</p>
+    </div>
+    <div class="board-of-directors-card">
+        <img src="{% static 'images/coordinator2.jpg' %}" alt="JUNIOR COORDINATOR">
+        <h5>GAURANSHI RAJPUT</h5>
+        <p>JUNIOR COORDINATOR</p>
+    </div>
+</div>
+{% endblock %}

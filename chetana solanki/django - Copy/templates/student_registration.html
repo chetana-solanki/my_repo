@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Samyak Classes</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="student-registration-body">
+    <div class="signup-container">
+        <h2>Student Registration</h2>
+        <form class="student-registration-form" method="POST" action="{% url 'student_registration' %}">
+            {% csrf_token %}
+
+
+            <!--  Role selection dropdown -->
+            <label for="role">Register As:</label>
+            <select id="role" name="role" required onchange="navigateToRegistration()">
+                <option value="student" selected>Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="worker">Worker</option>
+            </select>
+
+            <label for="username">User ID</label>
+            <input type="text" id="username" name="user_id" required>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="full_name" required>
+
+            <label for="mobile_number">Mobile Number</label>
+            <input type="number" id="mobile_number" name="mobile_number" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="class_name">Class Name</label>
+            <input type="text" id="class_name" name="class_name" required>
+
+            <button type="submit">Sign Up</button>
+
+            
+
+            <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+        </form>
+    </div>
+
+    <script>
+        function navigateToRegistration() {
+            const roleSelect = document.getElementById('role');
+            const selectedRole = roleSelect.value;
+
+            if (selectedRole === 'teacher') {
+                window.location.href = "{% url 'teacher_registration' %}";
+            } else if (selectedRole === 'worker') {
+                window.location.href = "{% url 'worker_registration' %}";
+            } else if (selectedRole === 'student') {
+                window.location.href = "{% url 'student_registration' %}";
+            }
+        }
+    </script>
+</body>
+
+</html>

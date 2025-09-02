@@ -1,0 +1,591 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 0 40px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 18px;
+}
+
+.navbar a:hover {
+    font-size: 20px;
+}
+
+.navbar-logo {
+    height: 65px;
+    width: auto;
+}
+
+.why-us-container {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    height: 25vh;
+}
+
+.inner-box {
+    /* border: 2px solid black; */
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8vh;
+}
+
+.school-image-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.school-image {
+    height: 70vh;
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.overlay-text {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.overlay button {
+    background-color: #ff9800;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.overlay button:hover {
+    background-color: #e68900;
+}
+
+footer {
+    background: #1c1c1c;
+    color: #ddd;
+    padding: 40px 60px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    /* border: 2px solid wheat; */
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #ff9800;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-bottom p span {
+    color: red;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
+.quick-links-column {
+    padding-left: 3%;
+}
+
+.carousel-overlay {
+    position: absolute;
+    left: 10%;
+    width: 70%;
+    margin-left: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.carousel-overlay-text {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Dropdown Customization */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    display: none;
+    /* Removes the default dropdown arrow from Bootstrap */
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    /* For a sharper look */
+    margin-top: 0;
+    /* Align directly below the nav item */
+    background-color: #fff;
+    /* Set a solid white background */
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    /* Add a standard Bootstrap-like border */
+
+}
+
+.dropdown-menu .dropdown-item {
+    /* Increased specificity to override .navbar a */
+    color: #000;
+    /* Black text as requested */
+    padding: .5rem 1rem;
+    /* A bit of extra padding for spacing */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Custom styles for the 'ABOUT US' button */
+.about-us-btn.btn-custom-yellow {
+    background-color: #ffc107;
+    /* A standard, vibrant yellow */
+    color: #212529;
+    /* Dark text for good contrast */
+    border-color: #ffc107;
+    font-weight: 300;
+    /* The following properties shift the button slightly left from the absolute center */
+    position: relative;
+    left: -60px;
+    /* Adjust this pixel value to control the shift */
+}
+
+.about-us-btn.btn-custom-yellow:hover {
+    background-color: #e0a800;
+    /* A slightly darker yellow for the hover effect */
+    border-color: #d39e00;
+    color: #212529;
+}
+
+.overview-container h1,
+.overview-container h2,
+.overview-container h3 {
+    color: #1e3c72;
+}
+
+.overview-container ul {
+    margin-left: 20px;
+}
+
+.overview-container .section {
+    margin-top: 5vh;
+    margin-left: 3%;
+}
+
+.black-box {
+    background-color: black;
+    margin-top: 15vh;
+    color: white;
+    height: 15vh;
+    padding-top: 5vh;
+    padding-left: 5%;
+    display: flex;
+}
+
+.board-of-directors-page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.board-of-directors-grid {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px 40px;
+    background: #f7faff;
+    color: #333;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.board-of-directors-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.board-of-directors-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(30, 60, 114, 0.2);
+}
+
+.board-of-directors-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 4px solid #eaf0fb;
+}
+
+.board-of-directors-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.board-of-directors-container {
+    margin-top: 5vh;
+}
+
+.infrastructure {
+    width: 100%;
+    margin-top: 10vh;
+    padding-left: 4%;
+}
+
+.infrastructure-row {
+    height: 40vh;
+    margin-top: 5vh;
+    /* border: 2px solid black; */
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+.infrastructure-image-div {
+    /* border: 2px solid black; */
+    width: 30%;
+}
+
+.infrastructure-text {
+    /* border: 2px solid black; */
+    width: 70%;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+.infrastructure-image {
+    width: 100%;
+    height: 100%;
+}
+
+.cbse-mandate-table {
+    border-collapse: collapse !important;
+    width: 95%;
+    margin-bottom: 5vh;
+}
+
+.cbse-mandate-table th,
+.cbse-mandate-table td {
+    border: 1px solid black !important;
+    padding: 8px;
+}
+
+.cbse-mandate-table td a {
+    text-decoration: none;
+    color: black;
+}
+
+.teacher-page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 5vh;
+}
+
+.teacher-grid {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px 40px;
+    background: #f7faff;
+    color: #333;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.teacher-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(30, 60, 114, 0.2);
+}
+
+.teacher-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 4px solid #eaf0fb;
+}
+
+.teacher-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+}
+
+.teacher-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.login-page {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Important for consistent sizing */
+}
+
+.login-form .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.login-form .options a {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form .options a:hover {
+    text-decoration: underline;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.student-registration-body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-top : 3vh;
+   padding-bottom: 3vh;
+}
+
+.signup-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 40%;
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.student-registration-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.student-registration-form input,
+.student-registration-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Important for consistent sizing */
+}
+
+
+.student-registration-form button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.student-registration-form textarea {
+    width: 100%;
+}
+
+.student-registration-form button:hover {
+    background: #218838;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

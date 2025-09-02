@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}CBSE Mandatory Disclosure{% endblock %}
+
+{% block content %}
+<div class="container-fluid black-box">
+    <div>
+        <h4>CBSE Mandatory Disclosure</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="container-fluid board-of-directors-container">
+        <h1 class="board-of-directors-page-title"><b><u>CBSE</u></b> Mandatory Disclosure</h1>
+    </div>
+    <div class="section">
+        <h4><b><u>A.General</u></b> information</h4>
+    </div>
+    <table class="cbse-mandate-table">
+        <tr>
+            <th>S.NO.</th>
+            <th>information</th>
+            <th>details</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Name Of the School</td>
+            <td>Shanti Niketan</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Affiliation No</td>
+            <td>1050224</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Affiliation Code</td>
+            <td>60175</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Computer Address With Pin Code</td>
+            <td>Maheshwar Road,Khargone District,Kasrawad,Madhya pradesh</td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Principal Name & Qualification</td>
+            <td>Dr.priya sharma (phD,M.Phil.[English],M.A.& B.Ed.)</td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>School Email id</td>
+            <td>Shantiniketan@gmail.com</td>
+        </tr>
+        <tr>
+            <td>07</td>
+            <td>Contact Details</td>
+            <td>+91 62646-56074,+91 83023-55453</td>
+        </tr>
+    </table>
+    <div class="section">
+        <h4><b><u>B.Document</u></b> information</h4>
+    </div>
+    <table class="cbse-mandate-table">
+        <tr>
+            <th>S.NO.</td>
+            <th>Title</td>
+            <th>view</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Copies of Affiliation/Upgradation Letter and Recent Extension of Affiliation, if any</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Copies of Societies/Trust/Company Registration/Renewal certificate, as applicable</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Copies of No Objection Certificate (NOC) issued, if applicable, by the State Govt./UT</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Copies of Recognition Certificate under RTE Act. 2009, and it's renewal, if applicable</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Copy of valid Building Safety Certificate as per the national building Code</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>Copy of valid Fire Safety Certificate issued by the Competent Authority</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>07</td>
+            <td>Copies of valid Water, Health and Sanitation Certificates</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>08</td>
+            <td>POCSO Committee Members 2023-24</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>09</td>
+            <td>Cyber Nodal Committee Members 2023-24 </td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Adolescence Committee Members 2023-24</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+    </table>
+    <div class="section">
+        <h4><b><u>C.Result</u></b> Academics</h4>
+    </div>
+    <table class="cbse-mandate-table">
+        <tr>
+            <th>S.NO.</td>
+            <th>Title</td>
+            <th>view</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Fee Structure of the School</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Annual Academic Calendar</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>List of School Management Committee (SMC)</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>List of Parents Teachers Association (PTA) Members</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Last Three Years Result of the Board Examination as per applicable</td>
+            <td><a href="{% static 'documents/book.pdf' %}" target="_blank">view</a></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

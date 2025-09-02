@@ -1,0 +1,50 @@
+<!-- parent template -->
+<!-- load static files like css and images -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shanti Niketan Academy | {% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- For footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Additional CSS block for page-specific styles -->
+    {% block black_box_css %}
+    <style>
+        .navbar a {
+            color: black;
+        }
+
+        .navbar {
+            height: 70px;
+        }
+    </style>
+    {% endblock %}
+</head>
+
+<body>
+    <!-- Include navbar for all pages except home (which has special navbar positioning) -->
+    <!-- in case of home page, override this block and make it empty -->
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+
+    <!-- Main content area -->
+    {% block content %}{% endblock %}
+
+    <!-- Include footer for all pages -->
+    <!-- footer is not present in home page, so it will remain same for home page -->
+    {% block footer %}
+        {% include 'footer.html' %}
+    {% endblock %}
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

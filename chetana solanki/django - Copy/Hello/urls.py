@@ -16,8 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls'))
 ]
+
+# Serve media files during development
+# This code allows Django to serve user-uploaded files (like faculty photos) during development
+# MEDIA_URL = '/media/' - URL prefix for media files in browser
+# MEDIA_ROOT = 'media/' folder path - Physical location where files are stored
+# Example: Browser requests /media/teachers/photo.jpg -> Django serves from media/teachers/photo.jpg
+# NOTE: This only works when DEBUG=True (development mode)
+# In production (DEBUG=False), web server (Nginx/Apache) handles media file serving
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

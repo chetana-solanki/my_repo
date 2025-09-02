@@ -1,124 +1,95 @@
-<!doctype html>
-<html lang="en">
+<!-- home page template "child template" -->
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
 
-<head>
-    <style>
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
-            padding: 0 40px;
-            height: 60px;
-            box-shadow: 0 4px 12px rgba(30, 60, 114, 0.2);
-        }
+{% block navbar %}
+<!-- Override parent navbar to empty - Home page has special navbar positioning inside carousel -->
+{% endblock %}
+{% block black_box_css %} {% endblock %}
+{% block content %}
+<!-- Carousel -->
+<div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+        <div class="carousel-item active"
+            style="background-image: url('https://images.unsplash.com/photo-1633585017028-53205ccd1aa4?w=1920&auto=format&fit=crop&q=80');">
+            <div class="carousel-overlay d-flex flex-column h-100 text-left py-5">
+                <div class="d-flex flex-column justify-content-center flex-grow-1">
+                    <div class="carousel-overlay-text">
+                        Knowledge empowers, values guide, together they shape future
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-lg about-us-btn btn-custom-yellow">ABOUT US</a>
+                </div>
+            </div>
+        </div>
 
-        .navbar ul {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .navbar .right-link {
-            margin-left: auto;
-        }
-
-        .navbar li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            padding: 0 18px;
-            display: flex;
-            align-items: center;
-            height: 60px;
-        }
-
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffd700;
-        }
-
-        .navbar-logo {
-            height: 50px;
-            width: auto;
-        }
-
-        .navbar .logo-item {
-            padding: 0 15px 0 0;
-        }
-
-        .hero-section {
-            position: relative;
-            text-align: center;
-            color: rgb(17, 17, 196);
-        }
-
-        .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* background: rgba(20, 40, 80, 0.6); */
-            padding: 30px 50px;
-            border-radius: 15px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero-text h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
-            margin: 0;
-        }
-    </style>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-</head>
-
-<body>
-    <nav class="navbar">
-        <ul>
-            <li class="logo-item">
-                <img src="https://img.pikbest.com/png-images/20241014/modern-school-logo-vector-design-artwork_10962285.png!w700wp"
-                    alt="School Logo" class="navbar-logo">
-            </li>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'admissions' %}">Admissions</a></li>
-            <li><a href="{% url 'faculty' %}">Faculty</a></li>
-            <li><a href="{% url 'achievements' %}">Achievements</a></li>
-            <li><a href="{% url 'login' %}">login</a></li>
-            <li class="right-link"><a href="tel:+919876543210">📞 Call: +91 98765 43210</a></li>
-        </ul>
-    </nav>
-    <div class="hero-section">
-        <img src="https://images.unsplash.com/photo-1616512659455-111d3367649f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            class="d-block w-100" alt="School Image 1" style="height: 89vh; object-fit: cover;">
-        <div class="hero-text">
-            <marquee>
-                <h1>Welcome to Samyak Classes – Empowering Future Generations</h1>
-            </marquee>
+        <div class="carousel-item"
+            style="background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&auto=format&fit=crop&q=80');">
+            <div class="carousel-overlay d-flex flex-column h-100 text-left py-5">
+                <div class="d-flex flex-column justify-content-center flex-grow-1">
+                    <div class="carousel-overlay-text">
+                        Where knowledge meets wisdom and dreams take flight.
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-lg about-us-btn btn-custom-yellow">ABOUT US</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item"
+            style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&auto=format&fit=crop&q=80');">
+            <div class="carousel-overlay d-flex flex-column h-100 text-left py-5">
+                <div class="d-flex flex-column justify-content-center flex-grow-1">
+                    <div class="carousel-overlay-text">
+                        Building strong minds with values that last a lifetime.
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-lg about-us-btn btn-custom-yellow">ABOUT US</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+    <!-- Navbar on top -->
+    <!-- template inclusion. not template inheritance. -->
+    {% include "navbar.html" %}
+</div>
+<div class="why-us-container">
+    <div class="inner-box">
+        <h3><b>WHY Shanti Niketan Academy</b></h3>
+    </div>
+    <div class="inner-box">
+        <h4><b>Academic Growth</b></h4>
+        <h5>Grow with us</h5>
+    </div>
+    <div class="inner-box">
+        <h4><b>Excellent Education</b></h4>
+        <h5>High quality education</h5>
+    </div>
+    <div class="inner-box">
+        <h4><b>Value-Driven Study</b></h4>
+        <h5>Global approach</h5>
+    </div>
+</div>
+<div class="school-image-container">
+    <img class="school-image"
+        src="https://www.buildingengineering.com.au/wp-content/uploads/2023/02/Blackburn-High-School-STEM-Website-1-1600x899.jpg"
+        alt="School Image">
+    <div class="overlay">
+        <div class="overlay-text">
+            Do you have any queries?<br>
+            Feel free to get in touch with us!
+        </div>
+        <button>Contact Us Now</button>
+    </div>
+</div>
+{% endblock %}

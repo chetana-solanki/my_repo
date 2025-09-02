@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Teaching Staff{% endblock %}
+
+{% block content %}
+<div class="container-fluid black-box">
+    <div>
+        <h4>Teaching Staff</h4>
+    </div>
+</div>
+<div class="container-fluid board-of-directors-container">
+    <h1 class="board-of-directors-page-title"><b><u>Teaching Staff</u></b> of Shanti Niketant Academy</h1>
+</div>
+<div class="teacher-grid">
+    {% for member in teacher_list %}
+    <div class="teacher-card">
+        {% if member.profile_picture %}
+        <img src="{{ member.profile_picture.url }}" alt="{{ member.full_name }}">
+        {% else %}
+        {# Agar photo upload nahi ki hai to default photo dikhayein #}
+        <img src="https://cdn.imgbin.com/25/15/3/imgbin-computer-icons-teacher-professor-education-lecturer-teacher-hw3zTYHiZuC6Cw6ECNaq76W3K.jpg"
+            alt="Default Teacher Photo">
+        {% endif %}
+        <h3>{{ member.full_name }}</h3>
+        <p><strong>Subject:</strong> {{ member.subject }}</p>
+        {% if member.age %}
+        <p><strong>Age:</strong> {{ member.age }}</p>
+        {% endif %}
+        {% if member.experience %}
+        <p><strong>Experience:</strong> {{ member.experience }} years</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

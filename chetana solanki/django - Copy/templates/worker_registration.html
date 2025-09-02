@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Samyak Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .signup-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* Important for consistent sizing */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>Worker Registration</h2>
+        <form method="POST" action="{% url 'worker_registration' %}">
+            {% csrf_token %}
+
+            <!--  Role selection dropdown -->
+            <label for="role">Register As:</label>
+            <select id="role" name="role" required onchange="navigateToRegistration()">
+                <option value="student" >Student</option>
+                <option value="teacher" >Teacher</option>
+                <option value="worker" selected >Worker</option>
+            </select>
+
+            <label for="username">User ID</label>
+            <input type="text" id="username" name="user_id" required>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="full_name" required>
+
+            <label for="mobile_number">Mobile Number</label>
+            <input type="number" id="mobile_number" name="mobile_number" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="work_type">Work Type</label>
+            <select id="work_type" name="work_type" required>
+                <option value="">Select Work Type</option>
+                <option value="cleaner">Cleaner</option>
+                <option value="cook">Cook</option>
+                <option value="guard">Guard</option>
+                <option value="driver">Driver</option>
+            </select>                             
+            <button type="submit">Sign Up</button>
+            <a href="{% url 'student_registration' %}"></a>
+            <a href="{% url 'teacher_registration' %}"></a>
+            <a href="{% url 'worker_registration' %}"></a>
+
+            <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+        </form>
+    </div>
+
+    <script>
+        function navigateToRegistration() {
+            const roleSelect = document.getElementById('role');
+            const selectedRole = roleSelect.value;
+
+            if (selectedRole === 'teacher') {
+                window.location.href = "{% url 'teacher_registration' %}";
+            } else if (selectedRole === 'worker') {
+                window.location.href = "{% url 'worker_registration' %}";
+            } else if (selectedRole === 'student') {
+                window.location.href = "{% url 'student_registration' %}";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os  # Added for path operations with templates, static files, and media files
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,13 +32,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     # Local Apps
-    'home.apps.HomeConfig',
+    'home.apps.HomeConfig',  # Home app for main website functionality
+    'django.contrib.auth', # Authentication framework for user management
 ]
 
 MIDDLEWARE = [
@@ -56,6 +55,9 @@ ROOT_URLCONF = 'Hello.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # MODIFIED: Added custom templates directory at project root level
+        # Default Django looks only in app-level templates folders
+        # This allows us to have project-wide templates in /templates/ folder
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -106,7 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# MODIFIED: Changed from default 'UTC' to Indian Standard Time
+# This affects how Django displays and handles datetime objects
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -123,6 +127,17 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# ADDED: Custom static files configuration
+# This tells Django to look for static files in a project-level 'static' directory
+# In addition to app-level static directories (due to APP_DIRS=True above)
+# Useful for project-wide CSS, JS, images that aren't app-specific
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
-] 
+]
+
+# ADDED: Media files configuration for user-uploaded content
+# MEDIA_URL: URL prefix that browsers use to access uploaded files
+# MEDIA_ROOT: Physical directory path where uploaded files are stored
+# Example: User uploads photo.jpg -> stored in /media/photo.jpg -> accessible at /media/photo.jpg
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

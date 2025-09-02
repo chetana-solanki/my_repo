@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Samyak Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .signup-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* Important for consistent sizing */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>Teacher Registration</h2>
+        <!-- Form for teacher registration with file upload support
+             method="POST" - Sends form data via HTTP POST method (secure for sensitive data)
+             action="{% url 'teacher_registration' %}" - Form submits to teacher_registration URL
+             enctype="multipart/form-data" - Required for file uploads (profile picture)
+             Without enctype, file uploads won't work properly -->
+        <form method="POST" action="{% url 'teacher_registration' %}" enctype="multipart/form-data">
+            <!-- CSRF token for security - prevents Cross-Site Request Forgery attacks -->
+            {% csrf_token %}
+
+            <!-- Role selection dropdown - allows switching between different registration types -->
+            <label for="role">Register As:</label>
+            <select id="role" name="role" required onchange="navigateToRegistration()">
+                <option value="student">Student</option>
+                <option value="teacher" selected>Teacher</option>
+                <option value="worker">Worker</option>
+            </select>
+
+            <!-- User ID field - unique identifier for login -->
+            <label for="username">User ID</label>
+            <input type="text" id="username" name="user_id" required>
+
+            <!-- Full name field - teacher's complete name for display -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="full_name" required>
+
+            <!-- Mobile number field - contact information -->
+            <label for="mobile_number">Mobile Number</label>
+            <input type="number" id="mobile_number" name="mobile_number">
+
+            <!-- Email field - for communication and potential login -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <!-- Password field - for authentication -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Profile picture upload - optional image field
+                 accept="image/*" - restricts file selection to image files only
+                 This field maps to Teacher.profile_picture ImageField -->
+            <label for="profile_picture">Profile Picture (Optional)</label>
+            <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+
+            <!-- Subject field - what subject the teacher teaches -->
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="18" max="100" required>
+
+            <label for="experience">Experience (in years)</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" required>
+
+            <button type="submit">Sign Up</button>
+
+            <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+        </form>
+    </div>
+
+    <script>
+        // Function to handle role selection and redirect to appropriate registration page - student, teacher, or worker
+        function navigateToRegistration() {
+            const roleSelect = document.getElementById('role');
+            const selectedRole = roleSelect.value;
+
+            if (selectedRole === 'teacher') {
+                window.location.href = "{% url 'teacher_registration' %}";
+            } else if (selectedRole === 'worker') {
+                window.location.href = "{% url 'worker_registration' %}";
+            } else if (selectedRole === 'student') {
+                window.location.href = "{% url 'student_registration' %}";
+            }
+        }
+    </script>
+</body>
+
+</html>
